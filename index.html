@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tank Arena (inspirado em diep.io)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hud">
+    <div><strong>Nome:</strong> <span id="playerName">Jogador</span></div>
+    <div><strong>Nível:</strong> <span id="level">1</span></div>
+    <div><strong>XP:</strong> <span id="xp">0</span> / <span id="xpNext">100</span></div>
+    <div><strong>Pontos:</strong> <span id="points">0</span></div>
+    <div><strong>HP:</strong> <span id="hp">100</span></div>
+    <button id="pauseBtn">Pausar</button>
+  </header>
+
+  <main>
+    <canvas id="game" width="1280" height="720" aria-label="Arena do jogo"></canvas>
+    <aside class="panel">
+      <h1>Tank Arena</h1>
+      <p class="muted">Jogo de navegador inspirado no estilo de progressão de tanques com bots.</p>
+      <div class="controls">
+        <h2>Controles</h2>
+        <ul>
+          <li>WASD / Setas: mover</li>
+          <li>Mouse: mirar</li>
+          <li>Clique esquerdo: atirar</li>
+          <li>1..4: evoluir status</li>
+        </ul>
+      </div>
+      <div class="upgrades">
+        <h2>Upgrades</h2>
+        <button data-stat="reload">1) Recarga</button>
+        <button data-stat="damage">2) Dano</button>
+        <button data-stat="speed">3) Velocidade</button>
+        <button data-stat="maxHp">4) Vida Máx.</button>
+      </div>
+      <p id="status" class="status">Sobreviva e derrote bots para subir de nível.</p>
+    </aside>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
